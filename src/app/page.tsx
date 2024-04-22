@@ -1,6 +1,7 @@
 import Navbar from "./components/navigation/Navbar";
 import Introduce from "./components/home/Introduce";
 import Activity from "./components/home/Activity";
+import Event from "./components/home/Event";
 
 export default function Home() {
   return (
@@ -13,6 +14,10 @@ export default function Home() {
 
       <div className="py-16">
         <Activity />
+      </div>
+
+      <div className="py-16">
+        <Event />
       </div>
     </main>
   );

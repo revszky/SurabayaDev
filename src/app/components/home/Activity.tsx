@@ -1,24 +1,56 @@
+"use client";
+
 import { IconChevronsRight } from "@tabler/icons-react";
-import React from "react";
+import React, { useState } from "react";
+
+const activities = [
+  {
+    title: "Workshop & Pelatihan IT",
+    description:
+      "Belajar bersama dengan para programmer, designer, product manager, maupun QA Engineer.",
+    image: "/community/pict2.jpeg",
+  },
+  {
+    title: "Gathering",
+    description:
+      "Ngopi bareng dan WFC (Work From Cafe) bersama dengan sesama anggota & pengurus Surabayadev.",
+    image: "/community/pict3.jpeg",
+  },
+  {
+    title: "Pengabdian Sosial",
+    description:
+      "Berbagi bersama dengan yang lebih membutuhkan ketika di momen bulan Ramadhan seperti berbagi takjil.",
+    image: "/community/pict4.jpeg",
+  },
+];
 
 const Activity = () => {
+  const [selectedImage, setSelectedImage] = useState(activities[0].image);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleActivityClick = (
+    image: React.SetStateAction<string>,
+    index: React.SetStateAction<number>
+  ) => {
+    setSelectedImage(image);
+    setActiveIndex(index);
+  };
+
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="max-w-3xl mx-auto text-center">
-        <h1 className="text-2xl md:text-3xl font-semibold">
+        <h1 className="text-4xl font-semibold">
           Kegiatan di <span>SurabayaDev</span>
         </h1>
-
         <p className="p-2 md:p-4">
-          Kami telah mengadakan lebih dari 50+ kegiatan di Kota Surabaya
+          Kami telah mengadakan lebih dari 50+ kegiatan di Kota Surabaya.
         </p>
       </div>
 
-      <div className="flex items-start justify-between py-6">
+      <div className="flex items-start justify-between py-8">
         <div className="max-w-xl">
-          <div className="pr-16">
+          <div className="lg:pr-16 text-center lg:text-left py-4">
             <h1 className="text-2xl font-semibold">Kolaborasi</h1>
-
             <p className="py-2">
               adalah salah satu core values dari komunitas kami. Dimana setiap
               kegiatan kami selalu melibatkan berbagai pihak mulai dari
@@ -26,70 +58,39 @@ const Activity = () => {
             </p>
           </div>
 
-          <div className="py-8">
+          <div className="p-4 block lg:hidden">
+            <img src={selectedImage} alt="community" className="rounded-2xl" />
+          </div>
+
+          <div className="py-4 lg:py-8 px-2 lg:px-0">
             <div className="space-y-4">
-              <div className="max-w-lg border p-2">
-                <div className="flex items-center">
-                  <div className="p-2">
-                    <h1 className="text-xl font-semibold">
-                      Workshop & Pelatihan IT
-                    </h1>
-
-                    <p className="py-2 pr-2">
-                      Belajar bersama dengan para programmer, designer, product
-                      manager, maupun QA Engineer.
-                    </p>
-                  </div>
-
-                  <div className="p-2">
-                    <IconChevronsRight />
-                  </div>
-                </div>
-              </div>
-
-              <div className="max-w-lg border p-2">
-                <div className="flex items-center">
-                  <div className="p-2">
-                    <h1 className="text-xl font-semibold">Gathering</h1>
-
-                    <p className="py-2 pr-2">
-                      Ngopi bareng dan WFC (Work From Cafe) bersama dengan
-                      sesama anggota & pengurus Surabayadev.
-                    </p>
-                  </div>
-
-                  <div className="p-2">
-                    <IconChevronsRight />
+              {activities.map((activity, index) => (
+                <div
+                  key={index}
+                  className={`max-w-lg border p-2 cursor-pointer rounded-lg ${
+                    activeIndex === index ? "bg-gray-300" : ""
+                  }`}
+                  onClick={() => handleActivityClick(activity.image, index)}
+                >
+                  <div className="flex items-center">
+                    <div className="p-2">
+                      <h1 className="text-xl font-semibold">
+                        {activity.title}
+                      </h1>
+                      <p className="py-2 pr-2">{activity.description}</p>
+                    </div>
+                    <div className="p-2">
+                      <IconChevronsRight />
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="max-w-lg border p-2">
-                <div className="flex items-center">
-                  <div className="p-2">
-                    <h1 className="text-xl font-semibold">Pengabdian Sosial</h1>
-
-                    <p className="py-2 pr-2">
-                      Berbagi bersama dengan yang lebih membutuhkan ketika di
-                      momen bulan Ramadhan seperti berbagi takjil.
-                    </p>
-                  </div>
-
-                  <div className="p-2">
-                    <IconChevronsRight />
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
 
-        <div>
-          <img
-            src="/community/pict2.jpeg"
-            alt="community"
-            className="rounded-2xl"
-          />
+        <div className="p-4 hidden lg:block">
+          <img src={selectedImage} alt="community" className="rounded-2xl" />
         </div>
       </div>
     </div>

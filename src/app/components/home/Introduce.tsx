@@ -31,7 +31,7 @@ const Introduce = () => {
           className="rounded-2xl md:w-[600px] md:h-[400px]"
         />
 
-        <button className="absolute top-full -translate-y-1/2 flex items-center p-4 bg-gray-300 gap-2 rounded-full shadow-lg">
+        <button className="absolute top-full -translate-y-10 flex items-center p-4 bg-gray-300 gap-2 rounded-full shadow-lg">
           <IconCircleCaretRight />
           Video Kegiatan Kami
         </button>

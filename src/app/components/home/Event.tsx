@@ -46,9 +46,9 @@ const Event = () => {
         {eventsData.map((event, index) => (
           <div
             key={index}
-            className="flex flex-col md:flex-row items-center md:gap-4 rounded-2xl bg-gray-200"
+            className="flex flex-col md:flex-row items-center md:gap-4 rounded-2xl bg-gray-200 overflow-hidden"
           >
-            <div className="rounded-t-2xl md:rounded-t-none md:rounded-l-2xl overflow-hidden">
+            <div className="rounded-t-2xl md:rounded-t-none md:rounded-l-2xl md:aspect-square lg:aspect-video self-stretch">
               <img
                 src={event.imageSrc}
                 alt="event"

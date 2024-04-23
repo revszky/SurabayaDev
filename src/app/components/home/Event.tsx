@@ -1,4 +1,5 @@
 import { IconCoin, IconMapPin } from "@tabler/icons-react";
+import Link from "next/link";
 import React from "react";
 
 const eventsData = [
@@ -84,6 +85,12 @@ const Event = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="pt-16">
+        <Link href="/" className="px-4 py-2 rounded-lg bg-gray-300">
+          Lihat Selengkapnya
+        </Link>
       </div>
     </div>
   );

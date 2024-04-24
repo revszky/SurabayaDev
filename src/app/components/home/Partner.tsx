@@ -1,6 +1,21 @@
-import React from "react";
-
 const Partner = () => {
+  const communityPartners = [
+    "alibaba.png",
+    "aws.png",
+    "mozila.png",
+    "devcamp.png",
+    "backend.png",
+    "sbyjs.png",
+    "pasuruan.png",
+    "klas.png",
+    "patria.png",
+    "tulungagung.png",
+  ];
+
+  const sponsor = ["jagoan.png", "microsoft.png"];
+
+  const mediaPartner = ["cakap.png", "daily.png"];
+
   return (
     <div className="flex items-center justify-center">
       <div className="flex flex-col items-center justify-center">
@@ -18,32 +33,39 @@ const Partner = () => {
           <div className="p-4 my-4">
             <p className="text-center">Sponsor</p>
             <div className="flex items-center justify-center gap-10 p-2">
-              <img src="/partner/jagoan.png" alt="jagoan hosting" />
-              <img src="/partner/microsoft.png" alt="microsoft" />
+              {sponsor.map((sponsors, index) => (
+                <img
+                  key={index}
+                  src={`/partner/${sponsors}`}
+                  alt={sponsors.replace(".png", "")}
+                />
+              ))}
             </div>
           </div>
 
           <div className="p-4 mt-4">
             <p className="text-center">Media Partner</p>
             <div className="flex items-center justify-center gap-10 p-2">
-              <img src="/partner/cakap.png" alt="cakap" />
-              <img src="/partner/daily.png" alt="daily social" />
+              {mediaPartner.map((media, index) => (
+                <img
+                  key={index}
+                  src={`/partner/${media}`}
+                  alt={media.replace(".png", "")}
+                />
+              ))}
             </div>
           </div>
 
           <div className="p-4 mt-4">
             <p className="text-center p-6">Community Partner</p>
             <div className="grid grid-cols-2 md:grid-cols-5 items-center justify-center gap-10 p-4">
-              <img src="/partner/alibaba.png" alt="alibaba" />
-              <img src="/partner/aws.png" alt="aws" />
-              <img src="/partner/mozila.png" alt="mozila" />
-              <img src="/partner/devcamp.png" alt="devcamp" />
-              <img src="/partner/backend.png" alt="backend" />
-              <img src="/partner/sbyjs.png" alt="surabaya js" />
-              <img src="/partner/pasuruan.png" alt="pasuruan" />
-              <img src="/partner/klas.png" alt="klas" />
-              <img src="/partner/patria.png" alt="patria" />
-              <img src="/partner/tulungagung.png" alt="tulungagung" />
+              {communityPartners.map((partner, index) => (
+                <img
+                  key={index}
+                  src={`/partner/${partner}`}
+                  alt={partner.replace(".png", "")}
+                />
+              ))}
             </div>
           </div>
         </div>

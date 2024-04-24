@@ -11,14 +11,8 @@ const MenuNav = ({ pilihMenu }: MenuNavProps) => {
   };
   return (
     <>
-      <ul className="flex items-center flex-col md:flex-row md:gap-[40px]">
-        <li className="mb-4 md:mb-0 text-lg">
-          <Link href="/" onClick={mengaturMenuKlik}>
-            <img src="/sbydev/sbydev.png" alt="Surabaya" />
-          </Link>
-        </li>
-
-        <div className="flex items-center flex-col md:flex-row md:gap-6">
+      <ul className="flex items-center flex-col md:flex-row mx-5 md:mx-0 gap-6">
+        <div className="flex items-center flex-col md:flex-row md:gap-14">
           <li className="mb-4 md:mb-0 text-lg">
             <Link href="/about-us" onClick={mengaturMenuKlik}>
               About Us
@@ -37,6 +31,10 @@ const MenuNav = ({ pilihMenu }: MenuNavProps) => {
             </Link>
           </li>
         </div>
+
+        <button className="px-4 py-2 bg-gray-300 rounded-lg">
+          Hubungi Kami
+        </button>
       </ul>
     </>
   );

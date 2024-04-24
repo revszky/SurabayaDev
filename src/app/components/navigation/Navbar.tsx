@@ -34,24 +34,28 @@ const Navbar = () => {
     };
   }, [bukaMenu]);
 
-  const bukaSidbar = `fixed flex flex-col top-0 left-0 h-full w-56 bg-gray-200 px-4 transform transition-transform duration-500 ease-in-out z-50${
+  const bukaSidbar = `fixed flex flex-col top-0 left-0 h-full bg-gray-200 px-4 transform transition-transform duration-500 ease-in-out z-50${
     bukaMenu ? " translate-x-0" : " -translate-x-full"
   }`;
 
   return (
-    <header className="p-4 sticky top-0 left-0 right-0 z-10">
+    <header className="p-4 sticky top-0 left-0 right-0 z-10 backdrop-blur-md">
       <div className="max-w-7xl relative mx-auto flex justify-center items-center">
-        <div className="flex items-center">
-          <div className="hidden md:block">
+        <div className="hidden md:block w-full">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="z-10">
+              <img src="/sbydev/sbydev.png" alt="Surabaya" />
+            </Link>
+
             <MenuNav pilihMenu={pilihMenu} />
           </div>
         </div>
 
         <div className="block md:hidden">
           <div className="flex items-center justify-center gap-4 relative">
-            <div className="z-10">
+            <Link href="/" className="z-10">
               <img src="/sbydev/sbydev.png" alt="Surabaya" />
-            </div>
+            </Link>
 
             <div>
               <button

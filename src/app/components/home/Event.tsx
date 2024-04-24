@@ -88,7 +88,7 @@ const Event = () => {
       </div>
 
       <div className="pt-16">
-        <Link href="/" className="px-4 py-2 rounded-lg bg-gray-300">
+        <Link href="/event" className="px-4 py-2 rounded-lg bg-gray-300">
           Lihat Selengkapnya
         </Link>
       </div>

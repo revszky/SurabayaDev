@@ -7,8 +7,6 @@ import Partner from "./components/home/Partner";
 export default function Home() {
   return (
     <main className="max-w-6xl mx-auto px-4">
-      <Navbar />
-
       <div className="py-16">
         <Introduce />
       </div>

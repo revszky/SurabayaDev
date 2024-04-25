@@ -1,4 +1,3 @@
-import Navbar from "./components/navigation/Navbar";
 import Introduce from "./components/home/Introduce";
 import Activity from "./components/home/Activity";
 import Event from "./components/home/Event";

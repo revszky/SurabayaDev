@@ -1,5 +1,6 @@
 import { IconSend, IconShare, IconUsersGroup } from "@tabler/icons-react";
 import React from "react";
+import Team from "./Team";
 
 const aboutItems = [
   {
@@ -49,6 +50,10 @@ const About = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div>
+          <Team />
         </div>
       </div>
     </div>

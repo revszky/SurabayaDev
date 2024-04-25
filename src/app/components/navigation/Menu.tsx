@@ -19,9 +19,7 @@ const Menu = () => {
           </li>
         </div>
 
-        <button className="px-4 py-2 bg-gray-300 rounded-lg">
-          Hubungi Kami
-        </button>
+        <button className="btn btn-secondary">Hubungi Kami</button>
       </ul>
     </>
   );

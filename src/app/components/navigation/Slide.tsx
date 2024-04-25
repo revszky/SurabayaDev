@@ -39,6 +39,7 @@ const Slide = () => {
           className="drawer-overlay"
           onClick={closeDrawer}
         ></label>
+
         <ul className="menu p-4 w-56 min-h-full flex items-center justify-center bg-base-200 text-base-content">
           <Menu />
         </ul>

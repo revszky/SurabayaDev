@@ -49,7 +49,7 @@ const Event = () => {
             key={index}
             className="flex flex-col md:flex-row items-center md:gap-4 rounded-2xl bg-gray-200 overflow-hidden"
           >
-            <div className="rounded-t-2xl md:rounded-t-none md:rounded-l-2xl md:aspect-square lg:aspect-video self-stretch">
+            <div className="rounded-t-2xl md:rounded-t-none md:rounded-l-2xl self-stretch md:w-1/2">
               <img
                 src={event.imageSrc}
                 alt="event"
@@ -57,7 +57,7 @@ const Event = () => {
               />
             </div>
 
-            <div className="flex flex-col items-start p-6">
+            <div className="flex flex-col items-start p-6 md:w-1/2">
               <div className="flex items-center gap-6">
                 <div className="flex items-center gap-1 border-2 border-black p-1.5 rounded-2xl">
                   <IconMapPin className="w-5 h-5" />

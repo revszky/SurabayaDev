@@ -1,4 +1,4 @@
-import Introduce from "./components/home/Introduce";
+import Introduction from "./components/home/Introduction";
 import Activity from "./components/home/Activity";
 import Event from "./components/home/Event";
 import Partner from "./components/home/Partner";
@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="max-w-6xl mx-auto px-4">
       <div className="py-16">
-        <Introduce />
+        <Introduction />
       </div>
 
       <div className="py-16">

@@ -6,9 +6,9 @@ const Team = () => {
     {
       image:
         "https://fastly.picsum.photos/id/531/500/500.jpg?hmac=eaduedF4dw0jS6AeDrrxNJIxAlsmWfdZWEPdEG84WRw",
-      name: "Achmad Fatoni",
+      name: "Arryangga Pratamaputra",
       role: "Founder",
-      linkedin: "https://www.linkedin.com/in/achmadfatoni/",
+      linkedin: "https://www.linkedin.com/in/arryanggaputra/",
     },
     {
       image:
@@ -20,14 +20,14 @@ const Team = () => {
     {
       image:
         "https://fastly.picsum.photos/id/531/500/500.jpg?hmac=eaduedF4dw0jS6AeDrrxNJIxAlsmWfdZWEPdEG84WRw",
-      name: "Arryangga Aliev Pratamaputra",
+      name: "Achmad Fatoni",
       role: "Founder",
-      linkedin: "https://www.linkedin.com/in/arryanggaputra/",
+      linkedin: "https://www.linkedin.com/in/achmadfatoni/",
     },
     {
       image:
         "https://fastly.picsum.photos/id/531/500/500.jpg?hmac=eaduedF4dw0jS6AeDrrxNJIxAlsmWfdZWEPdEG84WRw",
-      name: "Sawitry Dyah Kusuma Wardhani",
+      name: "Sawitry DK Wardhani",
       role: "Community Manager",
       linkedin: "https://www.linkedin.com/in/sawitry/",
     },
@@ -112,7 +112,7 @@ const Team = () => {
               />
             </div>
 
-            <h2 className="pt-2 flex-grow text-center text-lg font-medium line-clamp-1">
+            <h2 className="pt-2 px-2 flex-grow text-center text-lg font-medium line-clamp-1">
               {team.name}
             </h2>
             <p className="p-1 pb-2 text-center text-gray-600">{team.role}</p>

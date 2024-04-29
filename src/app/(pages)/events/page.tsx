@@ -3,10 +3,12 @@ import React from "react";
 
 const page = () => {
   return (
-    <main className="max-w-6xl mx-auto px-4">
-      <div className="py-16">
-        <Event />
-      </div>
+    <main>
+      <section className="py-16 bg-green-50">
+        <div className="max-w-6xl mx-auto">
+          <Event />
+        </div>
+      </section>
     </main>
   );
 };

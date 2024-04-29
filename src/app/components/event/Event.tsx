@@ -1,6 +1,10 @@
 import React from "react";
 import EventItem from "../partials/EventItem";
 
+interface EventProps {
+  limit?: number | null;
+}
+
 const events = [
   {
     image: "/event/event1.jpeg",
@@ -73,7 +77,7 @@ const events = [
   },
 ];
 
-const Event = ({ limit = null }: { limit: number | null }) => {
+const Event = ({ limit = null }: EventProps) => {
   return (
     <div className="flex items-center justify-center">
       <div className="flex flex-col items-center justify-center">

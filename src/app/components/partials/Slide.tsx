@@ -2,6 +2,7 @@
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import React, { useState } from "react";
 import Menu from "./Menu";
+import Logo from "./Logo";
 
 const Slide = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -19,9 +20,9 @@ const Slide = () => {
 
   return (
     <div className="drawer">
-      <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+      <input id="main-navigation" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
-        <label htmlFor="my-drawer">
+        <label htmlFor="main-navigation">
           <button
             onClick={clickMenuIcon}
             className={`transform ${
@@ -34,13 +35,16 @@ const Slide = () => {
       </div>
       <div className="drawer-side">
         <label
-          htmlFor="my-drawer"
+          htmlFor="main-navigation"
           aria-label="close sidebar"
           className="drawer-overlay"
           onClick={closeDrawer}
         ></label>
 
-        <ul className="menu p-4 w-56 min-h-full flex items-center justify-center bg-base-200 text-base-content">
+        <ul className="menu p-2 w-10/12 min-h-full flex bg-base-200 text-base-content">
+          <li className="mb-4">
+            <Logo />
+          </li>
           <Menu />
         </ul>
       </div>

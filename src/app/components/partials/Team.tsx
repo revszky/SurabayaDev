@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Team = () => {
@@ -89,29 +90,32 @@ const Team = () => {
     },
   ];
   return (
-    <div className="container mx-auto p-8">
-      <h1 className="text-2xl font-bold mb-12 text-center">Team</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="max-w-6xl mx-auto">
+      <h1 className="text-4xl font-semibold mb-12 text-center">Team Members</h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {teams.map((team, index) => (
           <a
             href={team.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             key={index}
-            className="border p-4 rounded-2xl shadow-md flex flex-col items-center justify-center"
+            className="flex flex-col border rounded-2xl shadow-md"
           >
-            <div className="w-70 h-70">
-              <img
+            <div className="h-60">
+              <Image
                 src={team.image}
                 alt={team.name}
-                className="object-cover w-full h-full rounded-2xl"
+                width={240}
+                height={240}
+                priority={true}
+                className="object-cover w-full h-full rounded-2xl "
               />
             </div>
 
-            <div className="text-center p-2">
-              <h2 className="text-xl font-semibold mb-2">{team.name}</h2>
-              <p className="text-gray-600">{team.role}</p>
-            </div>
+            <h2 className="pt-2 flex-grow text-center text-lg font-medium line-clamp-1">
+              {team.name}
+            </h2>
+            <p className="p-1 pb-2 text-center text-gray-600">{team.role}</p>
           </a>
         ))}
       </div>

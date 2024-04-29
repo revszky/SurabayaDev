@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "./components/navigation/Navigation";
-
-const inter = Inter({ subsets: ["latin"] });
+import Navigation from "./components/partials/Navigation";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="font-sans">
         <Navigation />
         <div className="min-h-screen">{children}</div>
       </body>

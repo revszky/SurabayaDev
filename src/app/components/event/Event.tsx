@@ -74,7 +74,7 @@ const events = [
   },
 ];
 
-const Event = () => {
+const Event = ({ limit }: { limit: number }) => {
   return (
     <div className="flex items-center justify-center">
       <div className="flex flex-col items-center justify-center">
@@ -85,7 +85,7 @@ const Event = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-between py-8">
           <div className="space-y-8">
-            {events.map((event, index) => (
+            {events.slice(0, limit).map((event, index) => (
               <div
                 key={index}
                 className="flex flex-col md:flex-row items-center md:gap-4 rounded-2xl bg-gray-200 overflow-hidden"

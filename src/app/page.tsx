@@ -1,7 +1,7 @@
 import Introduction from "./components/home/Introduction";
 import Activity from "./components/home/Activity";
-import Event from "./components/home/Event";
 import Partner from "./components/home/Partner";
+import Event from "./components/event/Event";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       </div>
 
       <div className="py-16">
-        <Event />
+        <Event limit={3} />
       </div>
 
       <div className="py-16">

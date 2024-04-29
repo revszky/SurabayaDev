@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Menu from "./Menu";
 import Slide from "./Slide";
+import Logo from "./Logo";
 
 const Navigation = () => {
   return (
@@ -9,9 +10,7 @@ const Navigation = () => {
       <div className="max-w-7xl relative mx-auto flex justify-center items-center">
         <div className="hidden md:block w-full">
           <div className="flex items-center justify-between">
-            <Link href="/">
-              <img src="/sbydev/sbydev.png" alt="Surabaya" />
-            </Link>
+            <Logo />
 
             <div>
               <Menu />
@@ -21,9 +20,7 @@ const Navigation = () => {
 
         <div className="block md:hidden w-full">
           <div className="flex items-center justify-between">
-            <Link href="/">
-              <img src="/sbydev/sbydev.png" alt="Surabaya" />
-            </Link>
+            <Logo />
 
             <div>
               <Slide />

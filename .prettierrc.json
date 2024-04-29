@@ -1,0 +1,6 @@
+{
+    "plugins": [],
+    "bracketSameLine": false,
+    "tabWidth": 2,
+    "htmlWhitespaceSensitivity": "ignore"
+}

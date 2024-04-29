@@ -1,4 +1,5 @@
 import { IconCoin, IconMapPin } from "@tabler/icons-react";
+import Image from "next/image";
 import React from "react";
 
 const events = [
@@ -90,8 +91,10 @@ const Event = () => {
                 className="flex flex-col md:flex-row items-center md:gap-4 rounded-2xl bg-gray-200 overflow-hidden"
               >
                 <div className="rounded-t-2xl md:rounded-t-none md:rounded-l-2xl self-stretch md:w-1/2">
-                  <img
+                  <Image
                     src={event.imageSrc}
+                    width={640}
+                    height={320}
                     alt="event"
                     className="object-cover w-full h-full"
                   />

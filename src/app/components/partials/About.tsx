@@ -1,22 +1,21 @@
-import { IconSend, IconShare, IconUsersGroup } from "@tabler/icons-react";
+import { IconBulb, IconShare, IconUsersGroup } from "@tabler/icons-react";
 import React from "react";
-import Team from "./Team";
 
 const aboutItems = [
   {
-    icon: <IconUsersGroup className="w-8 h-8" />,
+    icon: <IconUsersGroup className="w-12 h-12" />,
     title: "Memperluas Koneksi",
     description:
       "Memperluas relasi melalui komunitas untuk menjalin kebermanfaatan.",
   },
   {
-    icon: <IconShare className="w-8 h-8" />,
+    icon: <IconShare className="w-12 h-12" />,
     title: "Berbagi Ilmu",
     description:
       "Menjadi wadah yang tepat untuk bisa saling berbagi ilmu, pengalaman maupun wawasan tentang update teknologi.",
   },
   {
-    icon: <IconSend className="w-8 h-8" />,
+    icon: <IconBulb className="w-12 h-12" />,
     title: "Wadah Belajar",
     description:
       "Menjadi wadah belajar pegiat IT untuk bisa terus update mengenai tech industry saat ini.",
@@ -42,18 +41,16 @@ const About = () => {
               key={index}
               className="flex flex-col items-center justify-center"
             >
-              <div className="p-4">{item.icon}</div>
+              <div className="p-4 text-primary">{item.icon}</div>
 
               <div className="text-center max-w-sm">
-                <h1 className="text-xl font-semibold">{item.title}</h1>
+                <h1 className="text-xl font-semibold text-primary">
+                  {item.title}
+                </h1>
                 <p className="p-2 md:p-4">{item.description}</p>
               </div>
             </div>
           ))}
-        </div>
-
-        <div>
-          <Team />
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@ const menus = [
 
 const Menu = () => {
   return (
-    <ul className="flex md:items-center flex-col md:flex-row gap-4 font-medium tracking-wider text-lg">
+    <ul className="flex lg:items-center flex-col lg:flex-row gap-4 font-medium tracking-wider text-lg">
       {menus.map((item, index) => (
         <li key={index}>
           <Link

@@ -1,15 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { IconCoin, IconMapPin } from "@tabler/icons-react";
-
-interface EventItemType {
-  image: string;
-  title: string;
-  date: string;
-  description: string;
-  map: string;
-  price: string;
-}
+import { EventItemType } from "@/app/data/Events";
+import Link from "next/link";
 
 const EventItem: React.FC<{ event: EventItemType }> = ({ event }) => {
   return (
@@ -46,9 +39,12 @@ const EventItem: React.FC<{ event: EventItemType }> = ({ event }) => {
           <p>{event.description}</p>
         </div>
 
-        <button className="px-4 py-1 bg-gray-300 rounded-full">
+        <Link
+          href={`/events/${event.id}`}
+          className="px-4 py-1 bg-gray-300 rounded-full"
+        >
           Detail Event
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ const page = () => {
     <main>
       <section className="py-16 bg-green-50">
         <div className="max-w-6xl mx-auto">
-          <Event />
+          <Event limit={null} />
         </div>
       </section>
     </main>

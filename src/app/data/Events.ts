@@ -5,7 +5,7 @@ export interface EventItemType {
   description: string;
   map: string;
   price: string;
-  id: string;
+  id: number;
 }
 
 const events: EventItemType[] = [
@@ -17,7 +17,7 @@ const events: EventItemType[] = [
     description: "Surabaya Dev Tech Community Revolution!",
     map: "Offline Event",
     price: "Gratis",
-    id: "1",
+    id: 1,
   },
 
   {
@@ -29,7 +29,7 @@ const events: EventItemType[] = [
       "Bersiap untuk hadir di SurabayaDev Offline Meetup! Breaking the Barrier: Unleashing the Power of Frontend and FullStack Web Development",
     map: "Offline Event",
     price: "Gratis",
-    id: "2",
+    id: 2,
   },
 
   {
@@ -40,7 +40,7 @@ const events: EventItemType[] = [
       "Learn the basics of web automation testing using Puppeteer, an open-source Node library, in this webinar. Boost your testing efficiency!",
     map: "Offline Event",
     price: "Gratis",
-    id: "3",
+    id: 3,
   },
 
   {
@@ -51,7 +51,7 @@ const events: EventItemType[] = [
       "Mempersiapkan untuk menjadi sebagai seorang Quality Assurance",
     map: "Offline Event",
     price: "Gratis",
-    id: "4",
+    id: 4,
   },
 
   {
@@ -62,7 +62,7 @@ const events: EventItemType[] = [
       "Mengetahui bagaimana kerja seorang front end dev dalam proses web development menggunakan library javascript React JS",
     map: "Offline Event",
     price: "Gratis",
-    id: "5",
+    id: 5,
   },
 
   {
@@ -73,7 +73,7 @@ const events: EventItemType[] = [
       "Heuristic Usability merupakan Metode untuk menganalisa agar memberikan kemudahan dalam penggunaan.",
     map: "Offline Event",
     price: "Gratis",
-    id: "6",
+    id: 6,
   },
 
   {
@@ -83,7 +83,7 @@ const events: EventItemType[] = [
     description: 'Meet Up Surabaya dev "Memulai Karir sebagai Product Manager"',
     map: "Offline Event",
     price: "Gratis",
-    id: "7",
+    id: 7,
   },
 ];
 

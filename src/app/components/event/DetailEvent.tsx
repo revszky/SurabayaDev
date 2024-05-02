@@ -8,7 +8,7 @@ interface EventDetailProps {
 }
 
 const EventDetail: React.FC<EventDetailProps> = ({ eventId }) => {
-  const eventDetail = events.find((event) => event.id === parseInt(eventId));
+  const eventDetail = events.find((event) => event.id === eventId);
 
   if (!eventDetail) {
     return (

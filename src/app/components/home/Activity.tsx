@@ -78,8 +78,8 @@ const Activity = () => {
               {activities.map((activity, index) => (
                 <div
                   key={index}
-                  className={`max-w-lg border p-2 cursor-pointer rounded-lg ${
-                    activeIndex === index ? "bg-gray-300" : ""
+                  className={`max-w-lg border border-green-500 p-2 cursor-pointer rounded-lg ${
+                    activeIndex === index ? "bg-green-50" : ""
                   }`}
                   onClick={() => handleActivityClick(activity.image, index)}
                 >
@@ -91,7 +91,7 @@ const Activity = () => {
                       <p className="py-2 pr-2">{activity.description}</p>
                     </div>
                     <div className="p-2">
-                      <IconChevronsRight />
+                      <IconChevronsRight className="text-green-500" />
                     </div>
                   </div>
                 </div>

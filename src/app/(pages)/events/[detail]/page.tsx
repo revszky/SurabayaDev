@@ -8,8 +8,8 @@ interface DetailType {
 const Page: React.FC<{ params: DetailType }> = ({ params }) => {
   return (
     <main>
-      <section>
-        <div>
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4">
           <EventDetail eventId={params.detail} />
         </div>
       </section>

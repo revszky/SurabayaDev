@@ -5,22 +5,30 @@ import Event from "./components/event/Event";
 
 export default function Home() {
   return (
-    <main className="max-w-6xl mx-auto px-4">
-      <div className="py-16">
-        <Introduction />
-      </div>
+    <main>
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <Introduction />
+        </div>
+      </section>
 
-      <div className="py-16">
-        <Activity />
-      </div>
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <Activity />
+        </div>
+      </section>
 
-      <div className="py-16">
-        <Event limit={3} />
-      </div>
+      <section className="py-16 bg-green-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <Event limit={3} />
+        </div>
+      </section>
 
-      <div className="py-16">
-        <Partner />
-      </div>
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <Partner />
+        </div>
+      </section>
     </main>
   );
 }

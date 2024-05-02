@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const EventItem: React.FC<{ event: EventItemType }> = ({ event }) => {
   return (
-    <div className="flex flex-col md:flex-row items-center md:gap-4 rounded-2xl bg-gray-200 overflow-hidden">
+    <div className="flex flex-col md:flex-row items-center md:gap-4 rounded-2xl bg-slate-50 border border-green-500 overflow-hidden">
       <div className="rounded-t-2xl md:rounded-t-none md:rounded-l-2xl self-stretch md:w-1/2">
         <Image
           src={event.image}
@@ -41,9 +41,9 @@ const EventItem: React.FC<{ event: EventItemType }> = ({ event }) => {
 
         <Link
           href={`/events/${event.id}`}
-          className="px-4 py-1 bg-gray-300 rounded-full"
+          className="px-4 py-1 bg-green-500 rounded-full"
         >
-          Detail Event
+          <p className="font-semibold text-white">Detail Event</p>
         </Link>
       </div>
     </div>

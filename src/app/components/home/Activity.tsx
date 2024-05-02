@@ -118,7 +118,7 @@ const Activity = () => {
               <img
                 src={selectedImage}
                 alt="community"
-                className={`z-10 rounded-2xl ${
+                className={`rounded-2xl ${
                   animationActive
                     ? "-translate-y-10 opacity-0 duration-500"
                     : "translate-y-0 duration-500"

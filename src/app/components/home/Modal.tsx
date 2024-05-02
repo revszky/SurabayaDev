@@ -1,5 +1,4 @@
-import { IconX } from "@tabler/icons-react";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 interface ModalProps {
   isOpen: boolean;
@@ -7,6 +6,9 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
       onClose();
@@ -19,6 +21,14 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     }
   };
 
+  const handleVideoPlay = () => {
+    setIsPlaying(true);
+  };
+
+  const handleVideoPause = () => {
+    setIsPlaying(false);
+  };
+
   useEffect(() => {
     document.addEventListener("keydown", handleKeyPress);
 
@@ -27,23 +37,36 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (isOpen && videoRef.current) {
+      videoRef.current.play();
+    } else if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  }, [isOpen]);
+
   return (
     <>
       <div
-        className={`fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-opacity ${
+        className={`fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 transition-opacity ${
           isOpen
             ? "opacity-100 duration-500"
             : "opacity-0 duration-500 pointer-events-none"
         }`}
         onClick={handleBackdropClick}
       >
-        <div className="bg-white p-6 rounded-lg shadow-lg relative">
-          <button onClick={onClose} className="absolute top-0 right-0 p-1">
-            <IconX />
-          </button>
-          <div className="p-2">
-            <h1>Belum ada video</h1>
-          </div>
+        <div className="max-w-2xl p-4 lg:max-w-4xl">
+          <video
+            ref={videoRef}
+            autoPlay={isOpen}
+            controls
+            onPlay={handleVideoPlay}
+            onPause={handleVideoPause}
+          >
+            <source src="/activity/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </>

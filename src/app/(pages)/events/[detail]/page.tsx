@@ -1,19 +1,20 @@
+import EventDetail from "@/app/components/event/DetailEvent";
 import React from "react";
-import events from "@/app/data/Events";
 
-export interface detailType {
-  detail: number;
+interface DetailType {
+  detail: string;
 }
 
-const page = ({ params }: { params: detailType }) => {
-  const eventDetail = events.find((i) => i.id == params.detail);
-
+const Page: React.FC<{ params: DetailType }> = ({ params }) => {
   return (
-    <div>
-      <h1>hai ini halaman dinamis event: {eventDetail?.title}</h1>
-      {eventDetail?.description}
-    </div>
+    <main>
+      <section>
+        <div>
+          <EventDetail eventId={params.detail} />
+        </div>
+      </section>
+    </main>
   );
 };
 
-export default page;
+export default Page;

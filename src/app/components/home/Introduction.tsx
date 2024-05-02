@@ -5,6 +5,7 @@ import {
   IconBrandGithub,
   IconBrandTelegram,
   IconCircleCaretRight,
+  IconCode,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -23,7 +24,7 @@ const Introduction: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="flex flex-col items-center justify-center p-4 mb-4">
+      <div className="flex flex-col items-center justify-center p-2 md:p-6 mb-4">
         <h1 className="text-4xl md:text-6xl font-bold tracking-wider text-center mb-4">
           <p className="mb-2 bg-gradient-to-r from-primary to-teal-400 bg-clip-text text-transparent">
             Komunitas IT Arek Suroboyo,
@@ -42,7 +43,7 @@ const Introduction: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-4">
           <a
             href="https://t.me/surabayadev"
             target="_blank"
@@ -70,24 +71,26 @@ const Introduction: React.FC = () => {
         </div>
       </div>
 
-      <div className="p-4 relative flex flex-col items-center justify-center">
-        <Image
-          src="/community/pict1.jpeg"
-          width={640}
-          height={480}
-          alt="Surabaya Dev - Anniversary 3th"
-          className="rounded-2xl md:w-[600px] md:h-[400px]"
-        />
+      <div className="p-6 flex items-center justify-center">
+        <div className="relative flex flex-col items-center justify-center">
+          <Image
+            src="/community/pict1.jpeg"
+            width={640}
+            height={480}
+            alt="Surabaya Dev - Anniversary 3th"
+            className="rounded-2xl md:w-[600px] md:h-[400px]"
+          />
 
-        <button
-          className="absolute top-full -translate-y-10 flex items-center p-4 bg-gray-300 gap-2 rounded-full shadow-lg"
-          onClick={handleModalOpen}
-        >
-          <IconCircleCaretRight />
-          Video Kegiatan Kami
-        </button>
+          <button
+            className="absolute top-full -translate-y-10 flex items-center p-4 bg-gray-300 gap-2 rounded-full shadow-lg"
+            onClick={handleModalOpen}
+          >
+            <IconCircleCaretRight />
+            Video Kegiatan Kami
+          </button>
 
-        <Modal isOpen={isModalOpen} onClose={handleModalClose} />
+          <Modal isOpen={isModalOpen} onClose={handleModalClose} />
+        </div>
       </div>
     </div>
   );

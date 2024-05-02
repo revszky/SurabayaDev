@@ -6,7 +6,7 @@ import Event from "./components/event/Event";
 export default function Home() {
   return (
     <main>
-      <section className="py-16">
+      <section className="pt-2 md:pt-4 pb-16">
         <div className="max-w-6xl mx-auto px-4">
           <Introduction />
         </div>

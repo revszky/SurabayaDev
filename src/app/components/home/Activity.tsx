@@ -27,13 +27,16 @@ const activities = [
 const Activity = () => {
   const [selectedImage, setSelectedImage] = useState(activities[0].image);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [animationActive, setAnimationActive] = useState(false);
 
-  const handleActivityClick = (
-    image: React.SetStateAction<string>,
-    index: React.SetStateAction<number>
-  ) => {
+  const handleActivityClick = (image: string, index: number) => {
     setSelectedImage(image);
     setActiveIndex(index);
+    setAnimationActive(true);
+
+    setTimeout(() => {
+      setAnimationActive(false);
+    }, 500);
   };
 
   return (
@@ -59,7 +62,15 @@ const Activity = () => {
           </div>
 
           <div className="p-4 block lg:hidden">
-            <img src={selectedImage} alt="community" className="rounded-2xl" />
+            <img
+              src={selectedImage}
+              alt="community"
+              className={`rounded-2xl ${
+                animationActive
+                  ? "-translate-y-10 opacity-0 duration-500"
+                  : "translate-y-0 duration-500"
+              }`}
+            />
           </div>
 
           <div className="py-4 lg:py-8 px-2 lg:px-0">
@@ -90,7 +101,15 @@ const Activity = () => {
         </div>
 
         <div className="p-4 hidden lg:block">
-          <img src={selectedImage} alt="community" className="rounded-2xl" />
+          <img
+            src={selectedImage}
+            alt="community"
+            className={`rounded-2xl ${
+              animationActive
+                ? "-translate-y-10 opacity-0 duration-500"
+                : "translate-y-0 duration-500"
+            }`}
+          />
         </div>
       </div>
     </div>

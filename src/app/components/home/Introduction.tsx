@@ -1,3 +1,5 @@
+"use client";
+
 import {
   IconBrandFacebook,
   IconBrandGithub,
@@ -5,9 +7,20 @@ import {
   IconCircleCaretRight,
 } from "@tabler/icons-react";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import Modal from "./Modal";
 
-const Introduction = () => {
+const Introduction: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleModalOpen = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="flex flex-col items-center justify-center p-4 mb-4">
@@ -66,10 +79,15 @@ const Introduction = () => {
           className="rounded-2xl md:w-[600px] md:h-[400px]"
         />
 
-        <button className="absolute top-full -translate-y-10 flex items-center p-4 bg-gray-300 gap-2 rounded-full shadow-lg">
+        <button
+          className="absolute top-full -translate-y-10 flex items-center p-4 bg-gray-300 gap-2 rounded-full shadow-lg"
+          onClick={handleModalOpen}
+        >
           <IconCircleCaretRight />
           Video Kegiatan Kami
         </button>
+
+        <Modal isOpen={isModalOpen} onClose={handleModalClose} />
       </div>
     </div>
   );

@@ -88,7 +88,7 @@ const Introduction: React.FC = () => {
           />
 
           <button
-            className="absolute top-full -translate-y-10 flex items-center p-4 bg-gray-300 gap-2 rounded-full shadow-lg"
+            className="absolute top-full -translate-y-10 flex items-center p-4 bg-green-500 gap-2 rounded-full shadow-lg text-white font-semibold"
             onClick={handleModalOpen}
           >
             <IconCircleCaretRight />

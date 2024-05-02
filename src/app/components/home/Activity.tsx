@@ -1,6 +1,6 @@
 "use client";
 
-import { IconChevronsRight } from "@tabler/icons-react";
+import { IconArrowsUpDown, IconChevronsRight } from "@tabler/icons-react";
 import React, { useState } from "react";
 
 const activities = [
@@ -50,66 +50,96 @@ const Activity = () => {
         </p>
       </div>
 
-      <div className="flex items-start justify-between py-8">
-        <div className="max-w-xl">
-          <div className="lg:pr-16 text-center lg:text-left py-4">
-            <h1 className="text-2xl font-semibold">Kolaborasi</h1>
-            <p className="py-2">
-              adalah salah satu core values dari komunitas kami. Dimana setiap
-              kegiatan kami selalu melibatkan berbagai pihak mulai dari
-              komunitas lain, pemerintah Kota Surabaya, sponsor dan lainnya.
-            </p>
-          </div>
+      <div className="relative flex items-center justify-center">
+        <div className="flex items-start justify-between py-8">
+          <div className="max-w-xl">
+            <div className="lg:pr-16 text-center lg:text-left py-4">
+              <h1 className="text-2xl font-semibold">Kolaborasi</h1>
+              <p className="py-2">
+                adalah salah satu core values dari komunitas kami. Dimana setiap
+                kegiatan kami selalu melibatkan berbagai pihak mulai dari
+                komunitas lain, pemerintah Kota Surabaya, sponsor dan lainnya.
+              </p>
+            </div>
 
-          <div className="p-4 block lg:hidden">
-            <img
-              src={selectedImage}
-              alt="community"
-              className={`rounded-2xl ${
-                animationActive
-                  ? "-translate-y-10 opacity-0 duration-500"
-                  : "translate-y-0 duration-500"
-              }`}
-            />
-          </div>
-
-          <div className="py-4 lg:py-8 px-2 lg:px-0">
-            <div className="space-y-4">
-              {activities.map((activity, index) => (
-                <div
-                  key={index}
-                  className={`max-w-lg border border-green-500 p-2 cursor-pointer rounded-lg ${
-                    activeIndex === index ? "bg-green-50" : ""
+            <div className="p-4 block lg:hidden">
+              <div className="relative flex flex-col items-center justify-center">
+                <img
+                  src={selectedImage}
+                  alt="community"
+                  className={`rounded-2xl ${
+                    animationActive
+                      ? "-translate-y-2 opacity-0 duration-500"
+                      : "translate-y-0 duration-500"
                   }`}
-                  onClick={() => handleActivityClick(activity.image, index)}
+                />
+
+                <div
+                  className={`absolute -bottom-6 ${
+                    animationActive
+                      ? "translate-y-0 opacity-0 duration-500"
+                      : "-translate-y-2 duration-500"
+                  }`}
                 >
-                  <div className="flex items-center">
-                    <div className="p-2">
-                      <h1 className="text-xl font-semibold">
-                        {activity.title}
-                      </h1>
-                      <p className="py-2 pr-2">{activity.description}</p>
-                    </div>
-                    <div className="p-2">
-                      <IconChevronsRight className="text-green-500" />
+                  <div className="w-[360px] h-52 border-b border-l border-r border-green-500 rounded-2xl"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="py-4 lg:py-8 px-2 lg:px-0">
+              <div className="space-y-4">
+                {activities.map((activity, index) => (
+                  <div
+                    key={index}
+                    className={`max-w-lg border border-green-500 p-2 cursor-pointer rounded-lg ${
+                      activeIndex === index ? "bg-green-50" : ""
+                    }`}
+                    onClick={() => handleActivityClick(activity.image, index)}
+                  >
+                    <div className="flex items-center">
+                      <div className="p-2">
+                        <h1 className="text-xl font-semibold">
+                          {activity.title}
+                        </h1>
+                        <p className="py-2 pr-2">{activity.description}</p>
+                      </div>
+                      <div className="p-2">
+                        <IconChevronsRight className="text-green-500" />
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4 hidden lg:block">
+            <div className="relative flex flex-col items-center justify-center">
+              <img
+                src={selectedImage}
+                alt="community"
+                className={`z-10 rounded-2xl ${
+                  animationActive
+                    ? "-translate-y-10 opacity-0 duration-500"
+                    : "translate-y-0 duration-500"
+                }`}
+              />
+
+              <div
+                className={`absolute -bottom-16 -right-6 ${
+                  animationActive
+                    ? "translate-y-0 opacity-0 duration-500"
+                    : "-translate-y-10 duration-500"
+                }`}
+              >
+                <div className="w-96 h-96 border-b border-r border-green-500 rounded-2xl"></div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="p-4 hidden lg:block">
-          <img
-            src={selectedImage}
-            alt="community"
-            className={`rounded-2xl ${
-              animationActive
-                ? "-translate-y-10 opacity-0 duration-500"
-                : "translate-y-0 duration-500"
-            }`}
-          />
+        <div className="absolute -bottom-[85px]">
+          <IconArrowsUpDown className="w-12 h-12 stroke-1 text-green-500" />
         </div>
       </div>
     </div>

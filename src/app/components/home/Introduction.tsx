@@ -74,11 +74,11 @@ const Introduction: React.FC = () => {
       </div>
 
       <div className="p-6 flex items-center justify-center relative">
-        <div className="absolute -top-16 lg:-top-20 right-10 md:right-20 lg:right-5 xl:-right-10">
+        <div className="absolute -top-16 lg:-top-20 right-10 md:right-20 lg:right-5 xl:-right-10 -z-10">
           <BgRight />
         </div>
 
-        <div className="relative lg:z-10 flex flex-col items-center justify-center">
+        <div className="relative flex flex-col items-center justify-center">
           <Image
             src="/community/pict1.jpeg"
             width={640}
@@ -98,7 +98,7 @@ const Introduction: React.FC = () => {
           <Modal isOpen={isModalOpen} onClose={handleModalClose} />
         </div>
 
-        <div className="absolute bottom-24 lg:bottom-28 xl:bottom-24 left-0 lg:left-5 xl:-left-10">
+        <div className="absolute bottom-24 lg:bottom-28 xl:bottom-24 left-0 lg:-left-2 xl:-left-10">
           <BgLeft />
         </div>
       </div>

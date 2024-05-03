@@ -1,3 +1,6 @@
+import BgLeft from "../background/BgLeft";
+import BgRight from "../background/BgRight";
+
 const Partner = () => {
   const communityPartners = [
     "alibaba.png",
@@ -18,7 +21,7 @@ const Partner = () => {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center relative">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl font-semibold">
             Terima kasih telah bekerja sama dengan SurabayaDev
@@ -68,6 +71,10 @@ const Partner = () => {
               ))}
             </div>
           </div>
+        </div>
+
+        <div className="absolute bottom-[820px] right-10 md:bottom-[700px] md:right-28">
+          <BgRight />
         </div>
       </div>
     </div>

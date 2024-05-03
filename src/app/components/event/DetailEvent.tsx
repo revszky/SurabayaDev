@@ -2,9 +2,6 @@ import React from "react";
 import events from "@/app/data/Events";
 import { IconCoin, IconMapPin } from "@tabler/icons-react";
 import NotFoundEvent from "./NotFoundEvent";
-import BgLeft from "../background/BgLeft";
-import BgRight from "../background/BgRight";
-import Bg from "../background/Bg";
 
 interface EventDetailProps {
   eventId: string;
@@ -15,9 +12,13 @@ const EventDetail: React.FC<EventDetailProps> = ({ eventId }) => {
 
   if (!eventDetail) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <NotFoundEvent />
-      </div>
+      <main className="flex items-center justify-center">
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4">
+            <NotFoundEvent />
+          </div>
+        </section>
+      </main>
     );
   }
 

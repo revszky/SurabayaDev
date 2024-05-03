@@ -1,3 +1,4 @@
+import { IconArrowsUpDown } from "@tabler/icons-react";
 import BgLeft from "../background/BgLeft";
 import BgRight from "../background/BgRight";
 
@@ -22,6 +23,10 @@ const Partner = () => {
   return (
     <div className="flex items-center justify-center">
       <div className="flex flex-col items-center justify-center relative">
+        <div className="absolute -top-[90px]">
+          <IconArrowsUpDown className="w-12 h-12 stroke-1 text-green-500" />
+        </div>
+
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl font-semibold">
             Terima kasih telah bekerja sama dengan SurabayaDev

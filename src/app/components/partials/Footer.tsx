@@ -25,23 +25,27 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="border-t">
-      <div className="max-w-6xl py-8 px-2 mx-auto flex justify-between gap-4">
-        <p>&copy; 2014 - 2024 SurabayaDev. All rights reserved.</p>
+    <footer className="border-t border-green-500">
+      <div className="max-w-6xl py-4 px-2 mx-auto flex flex-col items-center justify-center md:flex-row md:justify-between">
+        <p className="text-center md:text-left p-1">
+          &copy; 2014 - 2024 SurabayaDev. All rights reserved.
+        </p>
 
-        <ul className="flex items-center gap-4">
-          {socialLinks.map((social, index) => (
-            <li key={index}>
-              <a
-                href={social.href}
-                target="_blank"
-                className="flex border border-transparent rounded-full p-1 hover:border-secondary"
-              >
-                {social.icon}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="p-1">
+          <ul className="flex items-center gap-4">
+            {socialLinks.map((social, index) => (
+              <li key={index}>
+                <a
+                  href={social.href}
+                  target="_blank"
+                  className="flex border border-transparent rounded-full p-1 hover:border-secondary"
+                >
+                  {social.icon}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </footer>
   );

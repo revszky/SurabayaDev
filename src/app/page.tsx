@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      <section className="pt-2 md:pt-4 pb-16">
+      <section className="pt-2 md:pt-4 pb-16 bg-gradient-to-t bg-green-50 to-slate-50">
         <div className="max-w-6xl mx-auto px-4">
           <Introduction />
         </div>
@@ -19,7 +19,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-green-50">
+      <section className="py-16 bg-gradient-to-t bg-green-50 to-slate-50">
         <div className="max-w-6xl mx-auto flex flex-col items-center justify-center px-4">
           <Event limit={3} />
 

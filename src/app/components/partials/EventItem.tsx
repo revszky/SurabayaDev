@@ -7,7 +7,7 @@ import Link from "next/link";
 const EventItem: React.FC<{ event: EventItemType }> = ({ event }) => {
   return (
     <div className="flex flex-col md:flex-row items-center md:gap-4 rounded-2xl bg-slate-50 border border-green-500 overflow-hidden">
-      <div className="rounded-t-2xl md:rounded-t-none md:rounded-l-2xl self-stretch md:w-1/2">
+      <div className="rounded-t-2xl md:rounded-t-none md:rounded-l-2xl self-stretch md:w-1/2 aspect-video">
         <Image
           src={event.image}
           width={640}

@@ -58,7 +58,7 @@ const teamData: TeamMember[] = [
   },
   {
     image:
-      'https://media.licdn.com/dms/image/D5603AQEHGEjQkNC3_w/profile-displayphoto-shrink_400_400/0/1685327745703?e=1720051200&v=beta&t=E9p36-6u7fRDaG2nM4LmKPjwSVSuLR0V72WLHXCqXeo',
+      'https://media.licdn.com/dms/image/D5603AQGKK20n0ITY4g/profile-displayphoto-shrink_800_800/0/1714863258440?e=1720656000&v=beta&t=xUHJaCzGhmseYFXZreMnW3YnRoagT8LObdnz1jstvv4',
     name: 'Miftahul Huda',
     role: 'R&D Division',
     linkedin: 'https://www.linkedin.com/in/iniakunhuda/',

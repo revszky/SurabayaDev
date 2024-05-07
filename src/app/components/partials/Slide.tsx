@@ -45,7 +45,7 @@ const Slide = () => {
           <li className="mb-4">
             <Logo />
           </li>
-          <Menu />
+          <Menu closeDrawer={closeDrawer} />
         </ul>
       </div>
     </div>

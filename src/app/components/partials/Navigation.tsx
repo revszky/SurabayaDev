@@ -18,7 +18,7 @@ const Navigation = () => {
             <Logo />
 
             <div>
-              <Menu closeDrawer={() => false} />
+              <Menu closeDrawer={openSlide} />
             </div>
           </div>
         </div>

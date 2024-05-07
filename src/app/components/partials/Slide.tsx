@@ -25,6 +25,7 @@ const Slide = () => {
         type="checkbox"
         className="drawer-toggle"
         checked={openMenu}
+        onChange={() => setOpenMenu(openMenu)}
       />
       <div className="drawer-content">
         <label htmlFor="main-navigation">

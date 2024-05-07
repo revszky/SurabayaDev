@@ -19,6 +19,8 @@ const menus = [
 const Menu = ({ closeDrawer }: CloseMenuProps) => {
   const closeSlidebar = () => {
     closeDrawer();
+    console.log("menutup slide menu jalan");
+    console.log(closeDrawer);
   };
   return (
     <ul className="flex lg:items-center flex-col lg:flex-row gap-4 font-medium tracking-wider text-lg">

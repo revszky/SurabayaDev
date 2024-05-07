@@ -20,7 +20,12 @@ const Slide = () => {
 
   return (
     <div className="drawer">
-      <input id="main-navigation" type="checkbox" className="drawer-toggle" />
+      <input
+        id="main-navigation"
+        type="checkbox"
+        className="drawer-toggle"
+        checked={openMenu}
+      />
       <div className="drawer-content">
         <label htmlFor="main-navigation">
           <button

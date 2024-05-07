@@ -49,7 +49,7 @@ const Slide = () => {
 
         <ul className="menu p-2 w-10/12 min-h-full flex bg-base-200 text-base-content">
           <li className="mb-4">
-            <Logo />
+            <Logo closeDrawer={closeDrawer} />
           </li>
           <Menu closeDrawer={closeDrawer} />
         </ul>

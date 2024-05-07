@@ -15,7 +15,7 @@ const Navigation = () => {
       <div className="max-w-7xl relative mx-auto flex justify-center items-center">
         <div className="hidden lg:block w-full">
           <div className="flex items-center justify-between">
-            <Logo />
+            <Logo closeDrawer={openSlide} />
 
             <div>
               <Menu closeDrawer={openSlide} />
@@ -25,7 +25,7 @@ const Navigation = () => {
 
         <div className="block lg:hidden w-full">
           <div className="flex items-center justify-between">
-            <Logo />
+            <Logo closeDrawer={openSlide} />
 
             <div>
               <Slide />

@@ -17,15 +17,12 @@ const menus = [
 ];
 
 const Menu = ({ closeDrawer }: CloseMenuProps) => {
-  const closeSlidebar = () => {
-    closeDrawer();
-  };
   return (
     <ul className="flex lg:items-center flex-col lg:flex-row gap-4 font-medium tracking-wider text-lg">
       {menus.map((item, index) => (
         <li key={index}>
           <Link
-            onMouseUp={closeSlidebar}
+            onMouseUp={closeDrawer}
             href={item.href}
             className="py-2 px-4 hover:bg-primary rounded-lg transition duration-100 hover:text-white"
           >
